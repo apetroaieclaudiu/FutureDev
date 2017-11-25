@@ -11,6 +11,8 @@ namespace HackaTown
     public class MvcApplication : System.Web.HttpApplication
     {
         public static HackaSQLEntities ent = new HackaSQLEntities();
+        //   public static Person p = null;
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();

@@ -26,5 +26,7 @@ namespace HackaTown
         }
     
         public virtual DbSet<Person> Persons { get; set; }
+        public virtual DbSet<Message> Messages { get; set; }
+        public virtual DbSet<Topic> Topics { get; set; }
     }
 }

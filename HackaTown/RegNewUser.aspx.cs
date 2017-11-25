@@ -30,15 +30,24 @@ namespace HackaTown
 
         protected void SaveBTN_Click(object sender, EventArgs e)
         {
+            foreach (Person q in MvcApplication.ent.Persons)
+            {
+                if (q.Email == Email.Text)
+                {
+                    return;
+                }
+            }
             Person p = new Person();
             p.PersonID = id_to_be_created;
             p.FirstName = FName.Text;
             p.LastName = LName.Text;
             p.Email = Email.Text;
             p.Password = Pass.Text;
+            p.isMaster = 1;
             MvcApplication.ent.Persons.Add(p);
             MvcApplication.ent.SaveChanges();
             id_to_be_created++;
+            Response.Redirect("~/MainPage.aspx");
             //schimba pagina
         }
     }

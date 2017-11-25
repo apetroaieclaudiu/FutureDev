@@ -12,13 +12,11 @@ namespace HackaTown
     using System;
     using System.Collections.Generic;
     
-    public partial class Person
+    public partial class Topic
     {
-        public int PersonID { get; set; }
-        public string LastName { get; set; }
-        public string FirstName { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public int isMaster { get; set; }
+        public int Id { get; set; }
+        public string TopicName { get; set; }
+        public Nullable<System.DateTime> CreationDate { get; set; }
+        public string Autor { get; set; }
     }
 }
