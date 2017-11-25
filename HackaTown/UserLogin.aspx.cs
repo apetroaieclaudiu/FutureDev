@@ -43,9 +43,7 @@ namespace HackaTown
                     else
                     { }
                     break;
-                }
-                
-                
+                }   
             }
         }
     }
