@@ -10,7 +10,7 @@
 namespace HackaTown {
     
     
-    public partial class MainPage {
+    public partial class Discuss {
         
         /// <summary>
         /// form1 control.
@@ -31,40 +31,31 @@ namespace HackaTown {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// uName control.
+        /// tID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label uName;
+        protected global::System.Web.UI.WebControls.Label tID;
         
         /// <summary>
-        /// Sign control.
+        /// TName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Sign;
+        protected global::System.Web.UI.WebControls.Label TName;
         
         /// <summary>
-        /// SupButton control.
+        /// TData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SupButton;
-        
-        /// <summary>
-        /// AddTop control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddTop;
+        protected global::System.Web.UI.WebControls.Label TData;
         
         /// <summary>
         /// TopicsPanel control.
@@ -83,5 +74,23 @@ namespace HackaTown {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder PlaceHolder1;
+        
+        /// <summary>
+        /// AddMessageButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AddMessageButton;
+        
+        /// <summary>
+        /// WriteMessageTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox WriteMessageTextBox;
     }
 }

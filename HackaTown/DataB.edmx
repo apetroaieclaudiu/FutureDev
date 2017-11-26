@@ -13,7 +13,7 @@
           <Property Name="Message" Type="nchar" MaxLength="1000" />
           <Property Name="Author" Type="nchar" MaxLength="255" />
           <Property Name="Date" Type="datetime" />
-          <Property Name="Title" Type="nchar" MaxLength="255" />
+          <Property Name="TopicID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Persons">
           <Key>
@@ -33,7 +33,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TopicName" Type="nchar" MaxLength="100" />
           <Property Name="CreationDate" Type="datetime" />
-          <Property Name="Autor" Type="nchar" MaxLength="250" Nullable="false" />
+          <Property Name="Autor" Type="nchar" MaxLength="250" />
         </EntityType>
         <EntityContainer Name="HackaSQLModelStoreContainer">
           <EntitySet Name="Messages" EntityType="Self.Messages" Schema="dbo" store:Type="Tables" />
@@ -68,7 +68,7 @@
           <Property Name="Message1" Type="String" MaxLength="1000" FixedLength="true" Unicode="true" />
           <Property Name="Author" Type="String" MaxLength="255" FixedLength="true" Unicode="true" />
           <Property Name="Date" Type="DateTime" Precision="3" />
-          <Property Name="Title" Type="String" MaxLength="255" FixedLength="true" Unicode="true" />
+          <Property Name="TopicID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Topic">
           <Key>
@@ -77,7 +77,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TopicName" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
           <Property Name="CreationDate" Type="DateTime" Precision="3" />
-          <Property Name="Autor" Type="String" Nullable="false" MaxLength="250" FixedLength="true" Unicode="true" />
+          <Property Name="Autor" Type="String" MaxLength="250" FixedLength="true" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -100,7 +100,7 @@
           <EntitySetMapping Name="Messages">
             <EntityTypeMapping TypeName="HackaSQLModel.Message">
               <MappingFragment StoreEntitySet="Messages">
-                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="TopicID" ColumnName="TopicID" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Author" ColumnName="Author" />
                 <ScalarProperty Name="Message1" ColumnName="Message" />

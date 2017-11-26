@@ -11,7 +11,7 @@ namespace HackaTown
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+            bool stupidUserWithAdminRights = false;
             Sign.Text = "Log in";
             if (Request.Cookies["User"] != null)
             {
@@ -20,19 +20,25 @@ namespace HackaTown
                 string userSettings = "";
                 if (Request.Cookies["User"]["Email"] != null)
                 { userSettings = Request.Cookies["User"]["Email"]; }
+                
+                
 
                 foreach (Person p in MvcApplication.ent.Persons)
                 {
                     if (p.Email == userSettings)
                     {
                         uName.Text = p.FirstName + ' ' + p.LastName;
+                        stupidUserWithAdminRights = p.isMaster == 1 ? true : false;
                         break;
                     }
-                    
+
                 }
             }
             else
+            {
                 uName.Text = "Awesome :P";
+                AddTop.Visible = false;
+            }
 
             foreach (Topic t in MvcApplication.ent.Topics)
             {
@@ -43,18 +49,62 @@ namespace HackaTown
                 Label l2 = new Label();
                 l2.Text = "Data: " + t.CreationDate.ToString() + "<br>";
                 Label l3 = new Label();
-                l3.Text = "Titlu: " + t.TopicName + "<br><br>";
+                l3.Text = "Titlu: " + t.TopicName + "<br>";
+
+                LinkButton dl = new LinkButton();
+                dl.Text = "Delete";
+                dl.CommandName = t.Id.ToString();
+                dl.Click += Dl_Click; ;
+
+                Label space = new Label();
+                space.Text = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+
+                LinkButton lb = new LinkButton();
+                lb.Text = "---><br><br>";
+                lb.CommandName = t.Id.ToString();
+                lb.Click += Lb_Click;
+
+
                 TopicsPanel.ContentTemplateContainer.Controls.Add(l1);
                 TopicsPanel.ContentTemplateContainer.Controls.Add(l2);
                 TopicsPanel.ContentTemplateContainer.Controls.Add(l3);
+                if (stupidUserWithAdminRights)
+                {
+                    TopicsPanel.ContentTemplateContainer.Controls.Add(dl);
+                    TopicsPanel.ContentTemplateContainer.Controls.Add(space);
+                }
+                TopicsPanel.ContentTemplateContainer.Controls.Add(lb);
                 
+
+
             }
-            //  this.Construct();
+        }
+
+        private void Dl_Click(object sender, EventArgs e)
+        {
+            int currentTopicID = int.Parse(((LinkButton)sender).CommandName);
+            List<Message> toBeDeleted = new List<Message>();
+            toBeDeleted = MvcApplication.ent.Messages.Where<Message>(temp => temp.TopicID == currentTopicID).ToList<Message>();
+            foreach (Message item in toBeDeleted)
+            {
+                MvcApplication.ent.Messages.Remove(item);
+            }
+            Topic t = MvcApplication.ent.Topics.Where<Topic>(select => select.Id == currentTopicID).First<Topic>();
+            MvcApplication.ent.Topics.Remove(t);
+            MvcApplication.ent.SaveChanges();
+            Response.Redirect("~/MainPage.aspx");
+
+        }
+
+        private void Lb_Click(object sender, EventArgs e)
+        {
+        
+            Response.Redirect("~/Discuss.aspx?topicID=" + ((LinkButton)sender).CommandName);
         }
 
         private void CurrentTopic_Load(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+           
         }
 
         protected void Button1_Click(object sender, EventArgs e)

@@ -169,6 +169,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Discuss.aspx.cs">
+      <DependentUpon>Discuss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Discuss.aspx.designer.cs">
+      <DependentUpon>Discuss.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,6 +217,13 @@
     <Compile Include="Topic.cs">
       <DependentUpon>DataB.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserController.aspx.cs">
+      <DependentUpon>UserController.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserController.aspx.designer.cs">
+      <DependentUpon>UserController.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserLogin.aspx.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -231,6 +245,7 @@
       <DependentUpon>DataB.edmx</DependentUpon>
       <LastGenOutput>DataB.cs</LastGenOutput>
     </Content>
+    <Content Include="Discuss.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -263,6 +278,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Topic.ascx" />
+    <Content Include="UserController.aspx" />
     <Content Include="UserLogin.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

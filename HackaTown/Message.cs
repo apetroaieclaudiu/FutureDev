@@ -18,6 +18,6 @@ namespace HackaTown
         public string Message1 { get; set; }
         public string Author { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
-        public string Title { get; set; }
+        public int TopicID { get; set; }
     }
 }

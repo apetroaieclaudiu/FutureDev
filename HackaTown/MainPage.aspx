@@ -19,7 +19,7 @@
     	<p>
 			&nbsp;</p>
 		<p>
-			<asp:Button ID="Button2" runat="server" Text="Add Topic" OnClick="Button2_Click" />
+			<asp:Button ID="AddTop" runat="server" Text="Add Topic" OnClick="Button2_Click" />
 		</p>
 		<asp:UpdatePanel ID="TopicsPanel" runat="server">
 			<ContentTemplate>
