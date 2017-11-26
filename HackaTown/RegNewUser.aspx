@@ -9,19 +9,27 @@
 <body>
     <form id="form1" runat="server">
         <div>
-        	<asp:Label ID="IdTest" runat="server" Text="Label"></asp:Label>
-			<br />
-			<asp:TextBox ID="FName" runat="server"></asp:TextBox>
-			<p><asp:TextBox ID="LName" runat="server" OnTextChanged="LName_TextChanged"></asp:TextBox></p>
-        </div>
+			<p>
+				SIGN UP<br /><br />
+        		First Name:<br />
+				<asp:TextBox ID="FName" runat="server"></asp:TextBox>
+			</p>
+			<p>
+				Last Name:<br />
+				<asp:TextBox ID="LName" runat="server" OnTextChanged="LName_TextChanged"></asp:TextBox>
+			</p>
+			<p>
+				E-mail:<br />
+				<asp:TextBox ID="Email" runat="server"></asp:TextBox>
+			</p>
     	
-			<asp:TextBox ID="Email" runat="server"></asp:TextBox>
-		
-		<p>
-			<asp:TextBox ID="Pass" runat="server"></asp:TextBox>
-		</p>
+			<p>
+				Password:<br />
+				<asp:TextBox ID="Pass" runat="server"></asp:TextBox>
+			</p>
+        </div>
     	<p>
-			<asp:Button ID="SaveBTN" runat="server" Text="SaveBTN" OnClick="SaveBTN_Click" />
+			<asp:Button ID="SaveBTN" runat="server" Text="Save" OnClick="SaveBTN_Click" />
 		</p>
     </form>
 </body>

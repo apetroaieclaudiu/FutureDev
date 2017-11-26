@@ -207,13 +207,6 @@
     <Compile Include="RegNewUser.aspx.designer.cs">
       <DependentUpon>RegNewUser.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topic.ascx.cs">
-      <DependentUpon>Topic.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Topic.ascx.designer.cs">
-      <DependentUpon>Topic.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Topic.cs">
       <DependentUpon>DataB.tt</DependentUpon>
     </Compile>
@@ -277,7 +270,6 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Topic.ascx" />
     <Content Include="UserController.aspx" />
     <Content Include="UserLogin.aspx" />
     <Content Include="Web.config" />
@@ -291,8 +283,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>

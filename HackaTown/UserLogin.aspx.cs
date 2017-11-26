@@ -35,6 +35,7 @@ namespace HackaTown
                     if (p.Password == Pass.Text)
                     {
                         HttpCookie userIdCookie = new HttpCookie("User");
+
                         userIdCookie["Email"] = Email.Text;
                         userIdCookie["Pass"] = Pass.Text;
                         userIdCookie["Fname"] = p.FirstName;

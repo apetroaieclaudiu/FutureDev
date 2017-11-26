@@ -15,25 +15,39 @@ namespace HackaTown
             bool stupidUserWithAdminRights = false;
             String s = Request.QueryString["topicID"];
             tID.Text = s;
-
+            if (s == "" || s == null)
+            {
+                Response.Redirect("~/MainPage.aspx");
+            }
             string userSettings = "";
-            if (Request.Cookies["User"]["Email"] != null)
-            { userSettings = Request.Cookies["User"]["Email"]; }
+
+            try
+            {
+                if (Request.Cookies["User"]["Email"] != null)
+                { userSettings = Request.Cookies["User"]["Email"]; }
+            }
+            catch
+            {
+                userSettings = null;
+            }
+            if (s == null)
+            {
+                return;
+            }
 
             foreach (Person p in MvcApplication.ent.Persons)
             {
                 if (p.Email == userSettings)
                 {
+                    AddMessageButton.Visible = true;
+                    WriteMessageTextBox.Visible = true;
                     stupidUserWithAdminRights = p.isMaster == 1 ? true : false;
                     break;
                 }
 
             }
 
-            if (s == null)
-            {
-                return;
-            }
+           
             currentTopicID = int.Parse(s);
             foreach (Topic item in MvcApplication.ent.Topics)
             {

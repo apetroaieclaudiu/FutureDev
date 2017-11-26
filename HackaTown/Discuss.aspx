@@ -28,8 +28,9 @@
 			</ContentTemplate>
 			</asp:UpdatePanel>
 
-    	<asp:Button ID="AddMessageButton" runat="server" OnClick="Button1_Click" Text="Write Message" />
-		<asp:TextBox ID="WriteMessageTextBox" runat="server"></asp:TextBox>
+		<asp:TextBox ID="WriteMessageTextBox" runat="server" Visible="False"></asp:TextBox>
+
+    	<asp:Button ID="AddMessageButton" runat="server" OnClick="Button1_Click" Text="Write Message" Visible="False" />
     </form>
 </body>
 </html>

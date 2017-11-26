@@ -20,7 +20,7 @@ namespace HackaTown
                 
             }
             id_to_be_created++;
-            IdTest.Text = id_to_be_created.ToString();
+            //IdTest.Text = id_to_be_created.ToString();
         }
 
         protected void LName_TextChanged(object sender, EventArgs e)

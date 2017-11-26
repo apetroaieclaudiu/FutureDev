@@ -44,7 +44,7 @@ namespace HackaTown
 
             foreach (Topic t in MvcApplication.ent.Topics)
             {
-                Topic1 currentTopic = new Topic1();
+             
                 
                 Label l1 = new Label();
                 l1.Text = "Autor: " + t.Autor + "<br>";
