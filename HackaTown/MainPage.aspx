@@ -15,6 +15,7 @@
 &nbsp;<div>
         	<asp:Button ID="Sign" runat="server" OnClick="Button1_Click" Text="Sign Out" />
 			<asp:Button ID="SupButton" runat="server" OnClick="Button1_Click1" Text="Sign Up" />
+			<asp:Button ID="UMGMT" runat="server" OnClick="UMGMT_Click" Text="User Management" Visible="False" />
         </div>
     	<p>
 			&nbsp;</p>

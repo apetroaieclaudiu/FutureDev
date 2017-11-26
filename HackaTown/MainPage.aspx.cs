@@ -29,6 +29,8 @@ namespace HackaTown
                     {
                         uName.Text = p.FirstName + ' ' + p.LastName;
                         stupidUserWithAdminRights = p.isMaster == 1 ? true : false;
+                        if (stupidUserWithAdminRights)
+                            UMGMT.Visible = true;
                         break;
                     }
 
@@ -128,6 +130,11 @@ namespace HackaTown
         protected void Button2_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/NewTopic.aspx");
+        }
+
+        protected void UMGMT_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/UserController.aspx");
         }
     }
 }

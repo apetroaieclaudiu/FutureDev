@@ -58,6 +58,15 @@ namespace HackaTown {
         protected global::System.Web.UI.WebControls.Button SupButton;
         
         /// <summary>
+        /// UMGMT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button UMGMT;
+        
+        /// <summary>
         /// AddTop control.
         /// </summary>
         /// <remarks>

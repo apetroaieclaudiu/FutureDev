@@ -39,6 +39,7 @@ namespace HackaTown
                         userIdCookie["Pass"] = Pass.Text;
                         userIdCookie["Fname"] = p.FirstName;
                         userIdCookie["Lname"] = p.LastName;
+                        userIdCookie["ID"] = p.PersonID.ToString();
                         Response.Cookies.Add(userIdCookie);
                         Response.Redirect("~/MainPage.aspx");
                     }

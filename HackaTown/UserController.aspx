@@ -9,7 +9,14 @@
 <body>
     <form id="form1" runat="server">
         <div>
-        </div>
+		<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel ID="TopicsPanel" runat="server">
+			<ContentTemplate>
+				<asp:PlaceHolder ID="PlaceHolder1" runat="server">
+				 </asp:PlaceHolder>
+			</ContentTemplate>
+			</asp:UpdatePanel>
+		</div>
     </form>
 </body>
 </html>
