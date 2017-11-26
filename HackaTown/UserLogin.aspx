@@ -6,17 +6,28 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body bgcolor="#95BCF9">
     <form id="form1" runat="server">
-        <div>
+        <div style="margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	font-size:x-large;
+	font-family:'Times New Roman', Times, serif;">
         	<asp:Label ID="Label1" runat="server" Text="E-mail"></asp:Label>
 			<br />
 			<asp:TextBox ID="Email" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
 			<br />
 			Password<br />
-			<asp:TextBox ID="Pass" runat="server" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
+			<asp:TextBox ID="Pass" TextMode="Password" runat="server" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
 			<br />
-			<asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Sign in" />
+			<asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Sign in" style="
+	 background-color:#075CE3;
+	 margin: 0px;
+	border: none;
+	font-size:large;
+	border:1px;"/>
         </div>
     </form>
 </body>

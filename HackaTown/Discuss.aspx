@@ -6,10 +6,10 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body bgcolor="#95BCF9">
     <form id="form1" runat="server">
 
-        <div>
+        <div font-family>
 		<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 			TopicID:
 			<asp:Label ID="tID" runat="server" Text="Label"></asp:Label>
@@ -20,17 +20,22 @@
 			Date:
 			<asp:Label ID="TData" runat="server" Text="Label"></asp:Label>
 		</div>
-
+		<div  style="background-color:#fff; font-family: 'Times New Roman', Times, serif; font-size:large;">
         	<asp:UpdatePanel ID="TopicsPanel" runat="server">
 			<ContentTemplate>
 				<asp:PlaceHolder ID="PlaceHolder1" runat="server">
 				 </asp:PlaceHolder>
 			</ContentTemplate>
 			</asp:UpdatePanel>
-
+		</div>
 		<asp:TextBox ID="WriteMessageTextBox" runat="server" Visible="False"></asp:TextBox>
 
-    	<asp:Button ID="AddMessageButton" runat="server" OnClick="Button1_Click" Text="Write Message" Visible="False" />
+    	<asp:Button ID="AddMessageButton" runat="server" OnClick="Button1_Click" Text="Write Message" Visible="False" style="
+	 background-color:#075CE3;
+	 margin: 0px;
+	border: none;
+	font-size:large;
+	border:1px;"/>
     </form>
 </body>
 </html>

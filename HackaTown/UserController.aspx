@@ -6,9 +6,9 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body bgcolor="#95BCF9">
     <form id="form1" runat="server">
-        <div>
+        <div style="color: black; font-size: large; font-weight: bold; font-family: 'Times New Roman', Times, serif">
 		<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <asp:UpdatePanel ID="TopicsPanel" runat="server">
 			<ContentTemplate>

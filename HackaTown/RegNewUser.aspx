@@ -6,9 +6,15 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body bgcolor="#95BCF9">
     <form id="form1" runat="server">
-        <div>
+       <div style="margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	font-size:x-large;
+	font-family:'Times New Roman', Times, serif;">
 			<p>
 				SIGN UP<br /><br />
         		First Name:<br />
@@ -25,11 +31,17 @@
     	
 			<p>
 				Password:<br />
-				<asp:TextBox ID="Pass" runat="server"></asp:TextBox>
+				<asp:TextBox TextMode="Password" ID="Pass" runat="server"></asp:TextBox>
 			</p>
-        </div>
+        
     	<p>
-			<asp:Button ID="SaveBTN" runat="server" Text="Save" OnClick="SaveBTN_Click" />
+			<asp:Button ID="SaveBTN" runat="server" Text="Save" OnClick="SaveBTN_Click" style="
+	 background-color:#075CE3;
+	 margin: 0px;
+	border: none;
+	font-size:large;
+	border:1px;"/>
+			</div>
 		</p>
     </form>
 </body>

@@ -43,7 +43,7 @@ namespace HackaTown
             p.LastName = LName.Text;
             p.Email = Email.Text;
             p.Password = Pass.Text;
-            p.isMaster = 1;
+            p.isMaster = 0;
             MvcApplication.ent.Persons.Add(p);
             MvcApplication.ent.SaveChanges();
             id_to_be_created++;
